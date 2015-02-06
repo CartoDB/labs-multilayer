@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="multilayer">
+    <head>
+        <!-- Use correct character set. -->
+        <meta charset="utf-8">
+        <!-- Tell IE to use the latest, best version (or Chrome Frame if pre-IE11). -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <title>Multilayer</title>
+        <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.11/themes/css/cartodb.css" />
+        <style>
+            #map {
+                position: absolute;
+                top: 20px;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            #selector {
+                position: fixed;
+                top: 50px;
+                right: 0;
+                bottom: 0;
+                left: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <div id="selector" ng-controller="SelectorCtrl">
+            <label style="display: block;" ng-repeat="layer in layers"><input type="checkbox" ng-model="selectedLayers[layer.id]" ng-change="layersUpdated(layer.id)" name="layer.id" />{{ layer.name }}</label>
+        </div>
+
+        <script src="http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.js"></script>
+        <script src="multilayer.js"></script>
+    </body>
+</html>
