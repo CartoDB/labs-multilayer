@@ -6,13 +6,13 @@ One layer per visualization and one visualization per layer.
 
 Example URL:
 
-http://cartodb.github.io/presales-multilayer/multilayer.html?u=dcarrion&t=multilayer&v=http://team.cartodb.com/api/v2/viz/9c5ed27c-ad4f-11e4-ae79-0e853d047bba/viz.json
+http://cartodb.github.io/presales-multilayer/multilayer.html?u=dcarrion&t=multilayer&v=9c5ed27c-ad4f-11e4-ae79-0e853d047bba
 
 URL params:
 
 * u: username
 * t: table with the layers
-* v: viz.json URL for the basemap (this visualization may contain data as well, but please remember this layer is *not* included in the selector and can't be hidden)
+* v: viz.json UUID for the basemap (this visualization may contain data as well, but please remember this layer is *not* included in the selector and can't be hidden)
 
 Required row fields in the layer table:
 
