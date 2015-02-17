@@ -1,17 +1,27 @@
 #map {
     position: absolute;
-    top: 20px;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
 }
 
 #selector {
-    position: fixed;
-    top: 50px;
-    right: 0;
-    bottom: 0;
-    left: 100px;
-    width: 200px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 350px;
     height: 300px;
+    webkit-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+    -moz-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+    box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+    border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.4);
+    background: #fff;
+}
+
+div.cartodb-zoom{
+    position: fixed;
+    left: 0;
+    bottom: 50px;
 }

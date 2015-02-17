@@ -13,6 +13,7 @@
     </head>
     <body>
         <div id="map"></div>
+
         <div id="selector" ng-controller="SelectorCtrl">
             <label style="display: block;" ng-repeat="layer in layers">
                 <input type="checkbox" ng-model="selectedLayers[layer.id]" ng-change="layersUpdated(layer.id)" name="layer.id" />{{ layer.name }}
