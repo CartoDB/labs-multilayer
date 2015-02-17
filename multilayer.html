@@ -16,9 +16,9 @@
         <div id="map"></div>
 
         <div id="selector" ng-controller="SelectorCtrl">
-            <div class="header">
+            <div ng-show="title" class="header">
                 <h1>{{ title }}</h1>
-                <h2>{{ description }}</h2>
+                <h2 ng-show="description">{{ description }}</h2>
             </div>
             <ul>
                 <li ng-repeat="layer in layers">
