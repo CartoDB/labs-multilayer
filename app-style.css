@@ -1,4 +1,4 @@
-#map {
+#map{
     position: absolute;
     top: 0;
     right: 0;
@@ -6,7 +6,7 @@
     left: 0;
 }
 
-#selector {
+#selector{
     position: absolute;
     top: 20px;
     left: 20px;
@@ -19,6 +19,20 @@
     border: 1px solid rgba(0,0,0,0.4);
     background: #fff;
 }
+
+h1{
+    font-size: 23px;
+    font-weight: bold;
+    margin: 30px 0 0 30px;
+}
+
+h2{
+    font-size: 15px;
+    font-weight: normal;
+    margin: 10px 0 0 30px;
+}
+
+/*Overriding styles*/
 
 div.cartodb-zoom{
     position: fixed;

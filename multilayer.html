@@ -9,15 +9,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
         <title>Multilayer</title>
         <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.11/themes/css/cartodb.css" />
+        <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="app-style.css" />
     </head>
     <body>
         <div id="map"></div>
 
         <div id="selector" ng-controller="SelectorCtrl">
-            <label style="display: block;" ng-repeat="layer in layers">
-                <input type="checkbox" ng-model="selectedLayers[layer.id]" ng-change="layersUpdated(layer.id)" name="layer.id" />{{ layer.name }}
-            </label>
+            <div>
+                <h1>Multilayer visualization</h1>
+                <h2>Short description goes here</h2>
+            </div>
+            <ul>
+                <li ng-repeat="layer in layers">
+                    <label>
+                        <input type="checkbox" ng-model="selectedLayers[layer.id]" ng-change="layersUpdated(layer.id)" name="layer.id" />
+                        {{ layer.name }}
+                    </label>
+                </li>
+            <ul>
         </div>
 
         <script src="http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.js"></script>
