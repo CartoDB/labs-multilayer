@@ -1,3 +1,19 @@
+/*Defaults*/
+
+h1{
+    font-size: 23px;
+    font-weight: bold;
+    margin: 30px 0 0 30px;
+}
+
+h2{
+    font-size: 15px;
+    font-weight: normal;
+    margin: 10px 0 0 30px;
+}
+
+/*Custom Elements*/
+
 #map{
     position: absolute;
     top: 0;
@@ -18,18 +34,6 @@
     border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px;
     border: 1px solid rgba(0,0,0,0.4);
     background: #fff;
-}
-
-h1{
-    font-size: 23px;
-    font-weight: bold;
-    margin: 30px 0 0 30px;
-}
-
-h2{
-    font-size: 15px;
-    font-weight: normal;
-    margin: 10px 0 0 30px;
 }
 
 /*Overriding styles*/
