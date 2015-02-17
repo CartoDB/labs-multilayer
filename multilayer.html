@@ -9,29 +9,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
         <title>Multilayer</title>
         <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.11/themes/css/cartodb.css" />
-        <style>
-            #map {
-                position: absolute;
-                top: 20px;
-                right: 0;
-                bottom: 0;
-                left: 0;
-            }
-            #selector {
-                position: fixed;
-                top: 50px;
-                right: 0;
-                bottom: 0;
-                left: 100px;
-                width: 200px;
-                height: 300px;
-            }
-        </style>
+        <link rel="stylesheet" href="app-style.css" />
     </head>
     <body>
         <div id="map"></div>
         <div id="selector" ng-controller="SelectorCtrl">
-            <label style="display: block;" ng-repeat="layer in layers"><input type="checkbox" ng-model="selectedLayers[layer.id]" ng-change="layersUpdated(layer.id)" name="layer.id" />{{ layer.name }}</label>
+            <label style="display: block;" ng-repeat="layer in layers">
+                <input type="checkbox" ng-model="selectedLayers[layer.id]" ng-change="layersUpdated(layer.id)" name="layer.id" />{{ layer.name }}
+            </label>
         </div>
 
         <script src="http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.js"></script>

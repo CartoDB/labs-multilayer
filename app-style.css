@@ -1,0 +1,17 @@
+#map {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#selector {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 100px;
+    width: 200px;
+    height: 300px;
+}
