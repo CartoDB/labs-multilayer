@@ -6,7 +6,7 @@ One layer per visualization and one visualization per layer.
 
 Example URL:
 
-http://localhost:8000/multilayer.html?u=dcarrion&t=multilayer&v=9c5ed27c-ad4f-11e4-ae79-0e853d047bba&tt=Multilayer%20map&d=Description%20test
+http://multilayer.cartodb.io/multilayer.html?u=dcarrion&t=multilayer&v=9c5ed27c-ad4f-11e4-ae79-0e853d047bba&tt=Multilayer%20map&d=Description%20test
 
 URL params:
 
