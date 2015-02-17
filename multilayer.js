@@ -5,11 +5,16 @@ function getURLParameter(name) {
 var user = getURLParameter('u');
 var table = getURLParameter('t');
 var uuid = getURLParameter('v');
+var title = getURLParameter('tt');
+var description = getURLParameter('d');
 var baseVizJsonUrl = "http://" + user + ".cartodb.com/api/v2/viz/" + uuid + "/viz.json";
 
 var multilayer = angular.module('multilayer', []);
 multilayer.controller('SelectorCtrl', function ($scope) {
     var cartodbLayers = [];
+
+    $scope.title = title;
+    $scope.description = description;
 
     $scope.selectedLayers = [];
 

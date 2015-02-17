@@ -6,13 +6,15 @@ One layer per visualization and one visualization per layer.
 
 Example URL:
 
-http://multilayer.cartodb.io/multilayer.html?u=dcarrion&t=multilayer&v=9c5ed27c-ad4f-11e4-ae79-0e853d047bba
+http://multilayer.cartodb.io/multilayer.html?u=dcarrion&t=multilayer&v=9c5ed27c-ad4f-11e4-ae79-0e853d047bba&tt=Multilayer%20map&d=Description%20test
 
 URL params:
 
 * u: username
 * t: table with the layers
 * v: viz.json UUID for the basemap (this visualization may contain data as well, but please remember this layer is *not* included in the selector and can't be hidden)
+* tt: Title of the map
+* d: Description - Keep it short!
 
 Required row fields in the layer table:
 
