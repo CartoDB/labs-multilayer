@@ -23,10 +23,8 @@
             </div>
             <ul>
                 <li ng-repeat="layer in layers">
-                    <label>
-                        <input type="checkbox" ng-model="selectedLayers[layer.id]" ng-change="layersUpdated(layer.id)" name="layer.id" />
-                        {{ layer.name }}
-                    </label>
+                    <input type="checkbox" ng-model="selectedLayers[layer.id]" ng-change="layersUpdated(layer.id)" name="layer.id" />
+                    <label>{{ layer.name }}</label>
                 </li>
             </ul>
         </div>

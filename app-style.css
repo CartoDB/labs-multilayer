@@ -3,6 +3,7 @@
 body{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
+    color: #333;
 }
 
 h1{
@@ -15,6 +16,19 @@ h2{
     margin: 10px 0 0 0;
     font-weight: 300;
     color: #999;
+}
+
+label{
+    font-weight: 300;
+    color: #999;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 2px;
+}
+
+input[type=checkbox]:checked+label{
+    font-weight: 400;
+    color: #333;
 }
 
 /*Custom Elements*/
