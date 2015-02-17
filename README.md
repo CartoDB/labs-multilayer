@@ -1,4 +1,4 @@
-# labs-multilayer
+# Toggle layers in CartoDB
 
 Multilayer is achieved through an angularjs-based selector (to keep HTML as clean and self-contained as possible) and a basemap-agnostic (i.e. it works with Leaflet, Google maps or whatever) logic.
 
@@ -6,7 +6,7 @@ One layer per visualization and one visualization per layer.
 
 Example URL:
 
-http://cartodb.github.io/labs-multilayer/multilayer.html?u=dcarrion&t=multilayer&v=9c5ed27c-ad4f-11e4-ae79-0e853d047bba
+http://multilayer.cartodb.io/multilayer.html?u=dcarrion&t=multilayer&v=9c5ed27c-ad4f-11e4-ae79-0e853d047bba
 
 URL params:
 

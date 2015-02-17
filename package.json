@@ -1,0 +1,13 @@
+{
+  "name": "labs-multilayer",
+  "author": "Daniel Carrion <daniel@cartodb.com>",
+  "description": "Toggle layers in CartoDB",
+  "version" : "0.0.1",
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/CartoDB/labs-multilayer.git"
+    },
+  "dependencies": {
+    "http-server": "~0.7.4"
+  }
+}

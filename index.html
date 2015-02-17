@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <link href="//cartodb-libs.global.ssl.fastly.net/cartodbui/assets/3.4.9/favicons/favicon.ico?1411985985" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+        <link href="//cartodb-libs.global.ssl.fastly.net/cartodbui/assets/3.4.9/stylesheets/cartodb.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="//cartodb-libs.global.ssl.fastly.net/cartodbui/assets/3.4.9/stylesheets/public_map.css" media="screen" rel="stylesheet" type="text/css" />
+        <!--[if gt IE 8]><link href="//cartodb-libs.global.ssl.fastly.net/cartodbui/assets/3.4.9/stylesheets/fonts_ie.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
+        <title>Multilayer</title>
+    </head>
+    <body class="public-map">
+        <div class="cartodb-public-wrapper">
+            <header class="cartodb-public-header">
+                <div class="inner">
+                    <h1><a href="http://www.cartodb.com" class="logo" id="the_logo">CartoDB</a></h1>
+                </div>
+            </header>
+            </div>
+        <div class="separator top"></div>
+        <div class="cartodb-map-data">
+            <div class="cartodb-info">
+                <div class="inner">
+                    <div class="details">
+                        <div class="content">
+                            <h1>Toggle layers in CartoDB</h1>
+                            <p class="description">Multilayer is achieved through an angularjs-based selector (to keep HTML as clean and self-contained as possible) and a basemap-agnostic (i.e. it works with Leaflet, Google maps or whatever) logic.</p>
+                            <br />
+                            <p class="description">One layer per visualization and one visualization per layer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cartodb-body">
+                <div class="inner">
+                    <div class="map-info">
+                    <div class="comments">
+                    <p class="description">Example URL: <a href="http://multilayer.cartodb.io/multilayer.html?u=dcarrion&t=multilayer&v=9c5ed27c-ad4f-11e4-ae79-0e853d047bba">http://multilayer.cartodb.io/multilayer.html?u=dcarrion&t=multilayer&v=9c5ed27c-ad4f-11e4-ae79-0e853d047bba</a></p>
+                    <br />
+                    <p class="description">URL params:</p>
+                    <ul>
+                        <li>u: username</li>
+                        <li>t: table with the layers</li>
+                        <li>v: viz.json UUID for the basemap (this visualization may contain data as well, but please remember this layer is *not* included in the selector and can't be hidden)</li>
+                    </ul>
+                    <br />
+                    <p class="description">Required row fields in the layer table:</p>
+                    <ul>
+                        <li>cartodb_id: not used</li>
+                        <li>the_geom: not_used</li>
+                        <li>name: name to appear in the selector</li>
+                        <li>viz_json: URL for the viz.json that corresponds to the visualization</li>
+                        <li>created_at: not used</li>
+                        <li>modified_at: not used</li>
+                    </ul>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            <div class="cartodb-footer">
+                <div class="inner">
+                    <div class="copyright embed-left-col">
+                        <div class="content">
+                            &copy; 2015 CartoDB - <a href="https://cartodb.com/signup" title="Create your own maps with CartoDB">Create your own maps</a>
+                        </div>
+                    </div>
+                    <div class="terms embed-right-col">
+                        <div class="content">
+                            <a href="http://cartodb.com/terms" target="blank">Terms of Service</a> ·
+                            <a href="http://cartodb.com/privacy" target="blank">Privacy policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
