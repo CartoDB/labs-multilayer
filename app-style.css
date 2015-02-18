@@ -43,7 +43,7 @@ input[type=checkbox]:checked+label{
 
 .header{
     background-color: #FAFAFA;
-    padding: 30px 0 30px 30px;
+    padding: 20px 0 20px 20px;
     margin: 0;
     border-bottom: 1px solid rgba(0,0,0,0.10);
     -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px;
@@ -53,7 +53,7 @@ input[type=checkbox]:checked+label{
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 350px;
+    width: 280px;
     webkit-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
     -moz-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
     box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
@@ -63,17 +63,17 @@ input[type=checkbox]:checked+label{
 }
 
 #selector ul{
-    margin: 10px 30px 30px 30px;
+    margin: 0 20px 20px 20px;
 }
 
 #selector ul li{
     border-bottom: 1px solid rgba(0,0,0,0.15);
-    padding: 20px 0 20px 0;
+    padding: 15px 0 15px 0;
 }
 
 #selector ul li:last-child{
     border-bottom: none;
-    padding: 20px 0 0 0;
+    padding-bottom: 0;
 }
 
 
