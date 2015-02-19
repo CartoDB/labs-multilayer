@@ -13,9 +13,11 @@ var multilayer = angular.module('multilayer', []);
 multilayer.controller('SelectorCtrl', function ($scope) {
     var cartodbLayers = [];
 
-    function addLayer(id) {
+    function addLayer(id, show) {
         return function (layer) {
-            layer.hide();
+            if (!show) {
+                layer.hide();
+            }
             cartodbLayers[id] = layer;
         };
     }
@@ -44,7 +46,7 @@ multilayer.controller('SelectorCtrl', function ($scope) {
         var map = vis.getNativeMap();
 
         var sql = new cartodb.SQL({user: user});
-        sql.execute("SELECT name, viz_json as vizjson, sql, cartocss, interactivity FROM " + table + " WHERE name IS NOT NULL")
+        sql.execute("SELECT name, show, viz_json as vizjson, sql, cartocss, interactivity FROM " + table + " WHERE name IS NOT NULL")
             .done(function (data) {
                 $scope.layers = data.rows;
                 for (var id = 0; id < $scope.layers.length; ++id) {
@@ -52,7 +54,7 @@ multilayer.controller('SelectorCtrl', function ($scope) {
 
                     layer = $scope.layers[id];
                     layer.id = id;
-                    $scope.selectedLayers[id] = false;
+                    $scope.selectedLayers[id] = layer.show ? true : false;
                     if (layer.vizjson) {
                         layerOptions = layer.vizjson;
                     } else {
@@ -71,7 +73,7 @@ multilayer.controller('SelectorCtrl', function ($scope) {
                     }
                     cartodb.createLayer(map, layerOptions)
                         .addTo(map)
-                        .done(addLayer(id))
+                        .done(addLayer(id, layer.show))
                         .error(function (error) {
                             console.log("error: " + error);
                         });
