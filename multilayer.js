@@ -15,7 +15,8 @@ multilayer.controller('SelectorCtrl', function ($scope) {
 
     function addLayer(id) {
         return function (layer) {
-            cartodbLayers[id] = layer
+            layer.hide();
+            cartodbLayers[id] = layer;
         };
     }
 
@@ -51,7 +52,7 @@ multilayer.controller('SelectorCtrl', function ($scope) {
 
                     layer = $scope.layers[id];
                     layer.id = id;
-                    $scope.selectedLayers[id] = true;
+                    $scope.selectedLayers[id] = false;
                     if (layer.vizjson) {
                         layerOptions = layer.vizjson;
                     } else {
