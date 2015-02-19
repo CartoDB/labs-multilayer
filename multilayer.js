@@ -13,17 +13,23 @@ var multilayer = angular.module('multilayer', []);
 multilayer.controller('SelectorCtrl', function ($scope) {
     var cartodbLayers = [];
 
+    function addLayer(id) {
+        return function (layer) {
+            cartodbLayers[id] = layer
+        };
+    }
+
     $scope.title = title;
     $scope.description = description;
 
     $scope.selectedLayers = [];
 
     $scope.layersUpdated = function (id) {
-        var sublayer = cartodbLayers[id];
+        var layer = cartodbLayers[id];
         if ($scope.selectedLayers[id]) {
-            sublayer.show();
+            layer.show();
         } else {
-            sublayer.hide();
+            layer.hide();
         }
     };
 
@@ -37,18 +43,34 @@ multilayer.controller('SelectorCtrl', function ($scope) {
         var map = vis.getNativeMap();
 
         var sql = new cartodb.SQL({user: user});
-        sql.execute("SELECT name, viz_json FROM " + table + " WHERE name IS NOT NULL")
+        sql.execute("SELECT name, viz_json as vizjson, sql, cartocss, interactivity FROM " + table + " WHERE name IS NOT NULL")
             .done(function (data) {
                 $scope.layers = data.rows;
                 for (var id = 0; id < $scope.layers.length; ++id) {
+                    var layerOptions;
+
                     layer = $scope.layers[id];
                     layer.id = id;
                     $scope.selectedLayers[id] = true;
-                    cartodb.createLayer(map, layer.viz_json)
+                    if (layer.vizjson) {
+                        layerOptions = layer.vizjson;
+                    } else {
+                        layerOptions = {
+                            user_name: user,
+                            type: "cartodb",
+                            sublayers: [{
+                                sql: layer.sql,
+                                cartocss: layer.cartocss,
+                                interactivity: layer.interactivity
+                            }],
+                            params: {
+                                id: id
+                            }
+                        };
+                    }
+                    cartodb.createLayer(map, layerOptions)
                         .addTo(map)
-                        .done(function (layer) {
-                            cartodbLayers.push(layer);
-                        })
+                        .done(addLayer(id))
                         .error(function (error) {
                             console.log("error: " + error);
                         });

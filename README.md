@@ -21,6 +21,9 @@ Required row fields in the layer table:
 * cartodb_id: not used
 * the_geom: not_used
 * name: name to appear in the selector
-* viz_json: URL for the viz.json that corresponds to the visualization
+* viz_json: URL for the viz.json that corresponds to the visualization (takes precedence over sql and cartocss)
+* sql: SQL query for the data in the layer (used if viz_json is not present)
+* cartocss: CartoCSS for the layer (used if viz_json is not present)
+* interactivity: Fields to interact with for the layer (used if viz_json is not present)
 * created_at: not used
 * modified_at: not used
