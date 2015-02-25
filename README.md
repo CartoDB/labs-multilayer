@@ -24,6 +24,7 @@ Required row fields in the layer table:
 * show: true if layer is to be displayed initially
 * viz_json: URL for the viz.json that corresponds to the visualization (takes precedence over sql and cartocss)
 * sql: SQL query for the data in the layer (used if viz_json is not present)
+* sql_user: user name for the SQL query (used if viz_json is not present)
 * cartocss: CartoCSS for the layer (used if viz_json is not present)
 * interactivity: Fields to interact with for the layer (used if viz_json is not present)
 * created_at: not used
