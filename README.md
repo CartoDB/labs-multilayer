@@ -1,12 +1,12 @@
-# Toggle layers in CartoDB
+# Multilayer Demo for Mexico City Geoportal
 
 Multilayer is achieved through an angularjs-based selector (to keep HTML as clean and self-contained as possible) and a basemap-agnostic (i.e. it works with Leaflet, Google maps or whatever) logic.
 
-One layer per visualization and one visualization per layer.
+Mexico City Demo URL:
 
-Example URL:
+http://multilayer.cartodb.io/multilayer.html?u=andrewbt&t=multilayer&v=9c5ed27c-ad4f-11e4-ae79-0e853d047bba&tt=Mexico%20DF%20Geoportal&d=A%20multilayer%20site%20for%20Finanzas%20DF
 
-http://multilayer.cartodb.io/multilayer.html?u=dcarrion&t=multilayer&v=9c5ed27c-ad4f-11e4-ae79-0e853d047bba&tt=Multilayer%20map&d=Description%20test
+All datasets are contained in the "finanzasdf-admin" CartoDB account. The "multilayer" table that populates the selector is on the "andrewbt" account. In a production use case, these could be changed to be under one account.
 
 URL params:
 
