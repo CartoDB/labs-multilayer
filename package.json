@@ -1,5 +1,5 @@
 {
-  "name": "labs-multilayer\/mexico-df-demo",
+  "name": "labs-multilayer-mexico-df-demo",
   "author": "Andrew Thompson <athompson@cartodb.com>",
   "description": "Toggle layers in CartoDB",
   "version" : "0.0.1",
