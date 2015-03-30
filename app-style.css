@@ -53,6 +53,7 @@ input[type=checkbox]:checked+label{
     position: absolute;
     top: 20px;
     left: 20px;
+    bottom: 100px;
     width: 280px;
     webkit-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
     -moz-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
@@ -60,6 +61,7 @@ input[type=checkbox]:checked+label{
     border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px;
     border: 1px solid rgba(0,0,0,0.4);
     background: #fff;
+    overflow: auto;
 }
 
 #selector ul{
@@ -80,11 +82,15 @@ input[type=checkbox]:checked+label{
 /*Overriding styles*/
 
 div.cartodb-zoom{
-    position: fixed;
-    left: 0;
-    bottom: 50px;
+    position: absolute;
+    right: 20px;
+    top: 50px;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x.ng-cloak {
     display: none !important;
+}
+
+td {
+    vertical-align: middle;
 }
